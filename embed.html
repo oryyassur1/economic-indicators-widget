@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעקב מדדים כלכליים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+</head>
+<body>
+    <div class="container widget-root">
+        <header>
+            <div class="header-row">
+                <div class="header-titles">
+                    <h1>מעקב מדדים כלכליים</h1>
+                    <p class="last-updated" id="lastUpdated"></p>
+                </div>
+                <div class="toggle-group" id="timeRange">
+                    <button class="toggle-btn active" data-range="all">כל התקופה</button>
+                    <button class="toggle-btn" data-range="7d">7 ימים</button>
+                    <button class="toggle-btn" data-range="24h">24 שעות</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="metric-selector">
+                <h3>בחירת מדדים <span class="hint">(עד 2)</span></h3>
+                <div class="metric-buttons" id="metricButtons"></div>
+            </div>
+        </div>
+
+        <div class="chart-wrapper" dir="ltr">
+            <canvas id="mainChart"></canvas>
+            <div class="empty-state" id="emptyState" style="display:none;">בחרו מדד אחד או שניים להצגה</div>
+            <div class="annotation-popup" id="annotationPopup" dir="rtl" style="display:none;">
+                <div class="popup-header">
+                    <span id="popupTitle"></span>
+                </div>
+                <p id="popupDesc"></p>
+            </div>
+        </div>
+
+        <div class="metric-descriptions" id="metricDescriptions" dir="rtl"></div>
+
+        <footer>
+            <p>מקורות מידע: Yahoo Finance &nbsp;|&nbsp; מתעדכן כל שעה</p>
+        </footer>
+    </div>
+
+    <script src="js/embed.js"></script>
+</body>
+</html>

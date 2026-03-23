@@ -1,0 +1,77 @@
+{
+  "title": "מעקב מדדים כלכליים",
+  "subtitle": "עימות ארה״ב-ישראל / איראן — החל מ-23 בפברואר 2026",
+  "description": "מעקב אחר מדדים כלכליים מרכזיים בתקופת העימות בין ארה״ב-ישראל לאיראן.",
+  "metricDescriptions": {
+    "brent_oil": "נפט ברנט — מדד מרכזי למחירי האנרגיה העולמיים, מושפע ישירות מהמתיחות באזור המפרץ.",
+    "ta125": "מדד ת״א-125 — משקף את ביצועי השוק הישראלי, רגיש במיוחד לאירועי ביטחון.",
+    "sp500": "S&P 500 — מדד המניות המרכזי בארה״ב, מושפע מהשלכות כלכליות גלובליות.",
+    "stoxx600": "STOXX Europe 600 — מדד המניות האירופי, מגיב לחששות אנרגיה וסחר.",
+    "asia_pacific": "אסיה-פסיפיק — מדד שווקי אסיה, מושפע מהשלכות שרשרת האספקה הגלובלית."
+  },
+  "events": [
+    {
+      "id": "war_start",
+      "date": "2026-02-28T16:00:00Z",
+      "title": "תחילת המבצע",
+      "description": "פתיחת מבצע ״שאגת הארי״ — תקיפה משותפת של ארה״ב וישראל על תשתיות גרעין ומשמרות המהפכה באיראן.",
+      "url": "https://www.ynet.co.il/news/article/s12dbclf11x",
+      "alwaysVisible": true,
+      "color": "#ef4444"
+    },
+    {
+      "id": "hormuz_blockade",
+      "date": "2026-03-04T10:00:00Z",
+      "title": "חסימת הורמוז הסלקטיבית",
+      "description": "משמרות המהפכה מכריזים על שליטה מלאה במצר הורמוז — חסימה סלקטיבית לספינות מערביות.",
+      "url": "https://www.ynet.co.il/news/article/hyu5100qfzg",
+      "alwaysVisible": false,
+      "color": "#f59e0b"
+    },
+    {
+      "id": "brent_120",
+      "date": "2026-03-08T23:00:00Z",
+      "title": "ברנט שובר 120$",
+      "description": "מחיר הנפט מזנק לשיא של כ-120$ לחבית — עלייה של כ-67% ממחיר טרום-המלחמה.",
+      "url": "https://www.ynet.co.il/economy/article/s1wp0kjtbl",
+      "alwaysVisible": false,
+      "color": "#ef4444"
+    },
+    {
+      "id": "trump_war_done",
+      "date": "2026-03-09T00:00:00Z",
+      "title": "טראמפ: ״המלחמה הושלמה״",
+      "description": "טראמפ מצהיר כי ״המלחמה בעצם הסתיימה״ — הנפט צונח מ-120$ לכ-85$ תוך שעות.",
+      "url": "https://www.ynet.co.il/economy/article/s1wp0kjtbl",
+      "alwaysVisible": false,
+      "color": "#22c55e"
+    },
+    {
+      "id": "trump_sanctions_relief",
+      "date": "2026-03-09T22:00:00Z",
+      "title": "טראמפ מקל סנקציות נפט",
+      "description": "טראמפ מודיע על הקלה זמנית בסנקציות על מדינות מייצרות נפט כדי להוריד מחירים.",
+      "url": "https://www.ynet.co.il/news/article/hkj88tny11l",
+      "alwaysVisible": false,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "south_pars",
+      "date": "2026-03-18T12:00:00Z",
+      "title": "תקיפת שדה סאות׳ פארס",
+      "description": "ישראל תוקפת את שדה הגז סאות׳ פארס ומתקן הזיקוק באסלויה — איראן מאיימת לתקוף מתקני נפט במפרץ.",
+      "url": "https://www.ynet.co.il/news/article/hj5temoqze",
+      "alwaysVisible": false,
+      "color": "#ef4444"
+    },
+    {
+      "id": "trump_ultimatum",
+      "date": "2026-03-22T00:00:00Z",
+      "title": "אולטימטום 48 שעות",
+      "description": "טראמפ דורש מאיראן לפתוח את מצר הורמוז תוך 48 שעות — מאיים להשמיד תחנות כוח.",
+      "url": "https://www.ynet.co.il/news/article/bjyxknn5be",
+      "alwaysVisible": false,
+      "color": "#f59e0b"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעקב מדדים כלכליים</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-row">
+                <div class="header-titles">
+                    <h1>מעקב מדדים כלכליים</h1>
+                    <p class="last-updated" id="lastUpdated"></p>
+                </div>
+                <div class="toggle-group" id="timeRange">
+                    <button class="toggle-btn active" data-range="all">כל התקופה</button>
+                    <button class="toggle-btn" data-range="7d">7 ימים</button>
+                    <button class="toggle-btn" data-range="24h">24 שעות</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="metric-selector">
+                <h3>בחירת מדדים <span class="hint">(עד 2)</span></h3>
+                <div class="metric-buttons" id="metricButtons"></div>
+            </div>
+        </div>
+
+        <div class="chart-wrapper" dir="ltr">
+            <canvas id="mainChart"></canvas>
+            <div class="empty-state" id="emptyState" style="display:none;">בחרו מדד אחד או שניים להצגה</div>
+            <div class="annotation-popup" id="annotationPopup" dir="rtl" style="display:none;">
+                <div class="popup-header">
+                    <span id="popupTitle"></span>
+                </div>
+                <p id="popupDesc"></p>
+            </div>
+        </div>
+
+        <div class="metric-descriptions" id="metricDescriptions" dir="rtl"></div>
+
+        <section class="text-editor" id="textEditor">
+            <div class="editor-header">
+                <h3>עריכת טקסטים</h3>
+                <button class="editor-btn secondary" id="copyTextsBtn">העתק JSON</button>
+            </div>
+            <div class="form-row">
+                <label for="editTitle">כותרת ראשית</label>
+                <input type="text" id="editTitle">
+            </div>
+            <div id="metricDescFields"></div>
+        </section>
+
+        <section class="event-editor" id="eventEditor">
+            <div class="editor-header">
+                <h3>ניהול אירועים על ציר הזמן</h3>
+                <div class="editor-actions">
+                    <button class="editor-btn" id="addEventBtn">+ הוסף אירוע</button>
+                    <button class="editor-btn secondary" id="copyJsonBtn">העתק JSON</button>
+                </div>
+            </div>
+
+            <div class="event-list" id="eventList"></div>
+
+            <div class="event-form" id="eventForm" style="display:none;">
+                <div class="form-row">
+                    <label for="evTitle">כותרת</label>
+                    <input type="text" id="evTitle" placeholder="שם האירוע">
+                </div>
+                <div class="form-row">
+                    <label for="evDesc">תיאור (מוצג בריחוף)</label>
+                    <input type="text" id="evDesc" placeholder="תיאור קצר">
+                </div>
+                <div class="form-row">
+                    <label for="evDate">תאריך ושעה (שעון ישראל)</label>
+                    <input type="datetime-local" id="evDate">
+                </div>
+                <div class="form-row">
+                    <label for="evUrl">קישור (נפתח בלחיצה)</label>
+                    <input type="url" id="evUrl" placeholder="https://...">
+                </div>
+                <div class="form-row">
+                    <label>צבע</label>
+                    <div class="color-presets" id="colorPresets">
+                        <button type="button" class="color-swatch" data-color="#ef4444" style="background:#ef4444"></button>
+                        <button type="button" class="color-swatch" data-color="#f59e0b" style="background:#f59e0b"></button>
+                        <button type="button" class="color-swatch" data-color="#10b981" style="background:#10b981"></button>
+                        <button type="button" class="color-swatch" data-color="#3b82f6" style="background:#3b82f6"></button>
+                        <button type="button" class="color-swatch" data-color="#8b5cf6" style="background:#8b5cf6"></button>
+                        <button type="button" class="color-swatch" data-color="#f97316" style="background:#f97316"></button>
+                    </div>
+                </div>
+                <div class="form-row checkbox-row">
+                    <label><input type="checkbox" id="evAlwaysVisible"> קו אנכי תמיד מוצג</label>
+                </div>
+                <div class="form-actions">
+                    <button class="editor-btn" id="saveEventBtn">שמור</button>
+                    <button class="editor-btn secondary" id="cancelEventBtn">ביטול</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>מקורות מידע: Yahoo Finance &nbsp;|&nbsp; מתעדכן כל שעה</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

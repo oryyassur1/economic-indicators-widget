@@ -1,0 +1,9 @@
+.claude/settings.local.json
+.claude/projects/
+.claude/todos/
+.claude/memory/
+.claude/plans/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
